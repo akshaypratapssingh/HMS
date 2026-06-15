@@ -104,6 +104,43 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- ⚠️ INTENTIONALLY VULNERABLE DEPENDENCIES — FOR DEPENDABOT WORKFLOW TESTING ONLY ⚠️ -->
+
+        <!-- CVE-2021-44228, CVE-2021-45046, CVE-2021-45105 (Log4Shell) -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.14.1</version>
+        </dependency>
+
+        <!-- CVE-2015-7501, CVE-2015-6420 (Remote code execution via deserialization) -->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+
+        <!-- CVE-2020-36518, CVE-2022-42003, CVE-2022-42004 (DoS via deep wrapper array nesting) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.2</version>
+        </dependency>
+
+        <!-- CVE-2020-8908, CVE-2023-2976 (Insecure temp directory + path traversal) -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
+
+        <!-- CVE-2022-25647 (Deserialization of Untrusted Data) -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
+        </dependency>
     </dependencies>
 
     <build>
